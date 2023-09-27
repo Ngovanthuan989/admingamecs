@@ -73,7 +73,7 @@
         <div class="collapse" id="promotion">
             <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link"
-                        href="https://1368iii.com/admin/promotion">Khuyến
+                        href="/promotion">Khuyến
                         mại</a></li>
             </ul>
 

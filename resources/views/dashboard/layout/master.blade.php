@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('/admin/vendors/owl-carousel-2/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
@@ -100,7 +101,10 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
+        <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="{{asset('/admin/vendors/js/vendor.bundle.base.js')}}"></script>
     <!-- endinject -->
@@ -140,7 +144,6 @@
             }
         });
     </script>
-
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
