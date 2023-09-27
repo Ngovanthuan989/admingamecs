@@ -7,8 +7,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Thêm khuyến mãi</h4>
-                        <form action="https://1368iii.com/admin/promotion" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="_token" value="AdFHLraKN7UzRtY1F2bvMjYhmnc2TfvtVMKFN7ZG">
+                        <form action="/promotion/addPost" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="title">Tiêu đề</label>
                                 <input type="text" name="title" class="form-control" id="title"
@@ -16,7 +16,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="subtitle">Tiêu đề phụ</label>
-                                <input type="text" name="subtitle" class="form-control" id="subtitle"
+                                <input type="text" name="sub_title" class="form-control" id="sub_title"
                                     placeholder="Tiêu đề phụ" required>
                             </div>
                             <div class="form-group">
@@ -25,26 +25,26 @@
                             </div>
                             <div class="form-group">
                                 <label for="subtitle">Nội dung Mobile</label><br>
-                                <textarea style="background-color: #2A3038;color: #fff;width:100%" name="content_mb" rows="10" id="my-editor"></textarea>
+                                <textarea style="background-color: #2A3038;color: #fff;width:100%" name="content_mobile" rows="10" id="my-editor"></textarea>
                             </div>
                             <input type="hidden" name="content" value="Trống" />
-                            <input type="hidden" name="content_mb" value="Trống" />
+                            <input type="hidden" name="content_mobile" value="Trống" />
                             <input type="hidden" name="title" value="Trống" />
                             <input type="hidden" name="subtitle" value="Trống" />
                             <input type="hidden" name="locale" value="vi" />
                             <div class="form-group">
-                                <label for="max_receipt">Số lần nhận tối đa</label>
-                                <input type="number" name="max_receipt" class="form-control" id="max_receipt"
+                                <label for="max_number">Số lần nhận tối đa</label>
+                                <input type="number" name="max_number" class="form-control" id="max_number"
                                     placeholder="Số lần nhận tối đa" required>
                             </div>
                             <div class="form-group">
-                                <label for="min_money">Số tiền tối thiểu</label>
-                                <input type="text" name="min_money" class="form-control" id="min_money"
+                                <label for="min_amount">Số tiền tối thiểu</label>
+                                <input type="text" name="min_amount" class="form-control" id="min_amount"
                                     placeholder="Số tiền tối thiểu" required>
                             </div>
                             <div class="form-group">
-                                <label for="max_promotion">Số tiền tối đa</label>
-                                <input type="text" name="max_promotion" class="form-control" id="max_promotion"
+                                <label for="max_amount">Số tiền tối đa</label>
+                                <input type="text" name="max_amount" class="form-control" id="max_amount"
                                     placeholder="Số tiền tối đa" required>
                             </div>
                             <div class="form-group">
@@ -54,12 +54,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="bet">Vòng cược</label>
-                                <input type="text" name="bet" class="form-control" id="bet"
+                                <input type="text" name="betting_round" class="form-control" id="betting_round"
                                     placeholder="Vòng cược" required>
                             </div>
                             <div class="form-group">
                                 <label for="order">Trình tự</label>
-                                <input type="text" name="order" class="form-control" id="order"
+                                <input type="text" name="sequence" class="form-control" id="sequence"
                                     placeholder="Trình tự" required>
                             </div>
                             <div class="form-group">

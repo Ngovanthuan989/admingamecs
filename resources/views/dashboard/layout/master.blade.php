@@ -166,7 +166,7 @@
     </script>
     <script>
         CKEDITOR.replace('content');
-        CKEDITOR.replace('content_mb');
+        CKEDITOR.replace('content_mobile');
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
