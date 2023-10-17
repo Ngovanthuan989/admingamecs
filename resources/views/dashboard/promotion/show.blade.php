@@ -31,37 +31,41 @@
                                         </tr>
                                     </thead>
                                     <tbody id="content-body">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>THƯỞNG SINH NHẬT 688,000 VNĐ</td>
-                                            <td>1</td>
-                                            <td>999,999,999</td>
-                                            <td>99999999999</td>
-                                            <td>69</td>
-                                            <td>5</td>
-                                            <td>9</td>
-                                            <td>Hoạt động</td>
-                                            <td>01-12-2022</td>
-                                            <td>31-12-2023</td>
-                                            <td>2022-12-01 13:47:45</td>
-                                            <td class="d-flex" style="gap: 10px">
-                                                <a href="https://1368iii.com/admin/promotion/47/edit"
-                                                    class="btn-success px-3"
-                                                    style="border-radius:5px;display:flex;align-items: center;">Sửa</a>
-                                                <a href="https://1368iii.com/admin/promotion/47/edit?locale=th"
-                                                    class="btn-success px-3"
-                                                    style="border-radius:5px;display:flex;align-items: center;">th</a>
-                                                <a href="https://1368iii.com/admin/promotion/47/edit?locale=vi"
-                                                    class="btn-success px-3"
-                                                    style="border-radius:5px;display:flex;align-items: center;">vi</a>
-                                                <form action="https://1368iii.com/admin/promotion/47" method="POST">
-                                                    <input type="hidden" name="_token"
-                                                        value="bZaLqCQlVReQKz3ogxzYGR316RSRvPrm8Ld7MQ4R"> <input
-                                                        name="_method" type="hidden" value="DELETE">
-                                                    <button type="submit" class="btn btn-danger">Xóa</button>
-                                                </form>
-                                            </td>
-                                        </tr>
+                                        @foreach ($get_promotion as $get_promotions)
+                                            <tr>
+                                                <td>{{$get_promotions->id}}</td>
+                                                <td>{{$get_promotions->title}}</td>
+                                                <td>{{$get_promotions->max_number}}</td>
+                                                <td>{{$get_promotions->min_amount}}</td>
+                                                <td>{{$get_promotions->max_amount}}</td>
+                                                <td>{{$get_promotions->percent}}</td>
+                                                <td>{{$get_promotions->betting_round}}</td>
+                                                <td>{{$get_promotions->sequence}}</td>
+                                                <td>
+                                                    @if ($get_promotions->status == 1)Hoạt động @else vô hiệu hoá @endif
+                                                </td>
+                                                <td>{{$get_promotions->time_start}}</td>
+                                                <td>{{$get_promotions->time_end}}</td>
+                                                <td>{{$get_promotions->created_at}}</td>
+                                                <td class="d-flex" style="gap: 10px">
+                                                    <a href="https://1368iii.com/admin/promotion/47/edit"
+                                                        class="btn-success px-3"
+                                                        style="border-radius:5px;display:flex;align-items: center;">Sửa</a>
+                                                    <a href="https://1368iii.com/admin/promotion/47/edit?locale=th"
+                                                        class="btn-success px-3"
+                                                        style="border-radius:5px;display:flex;align-items: center;">th</a>
+                                                    <a href="https://1368iii.com/admin/promotion/47/edit?locale=vi"
+                                                        class="btn-success px-3"
+                                                        style="border-radius:5px;display:flex;align-items: center;">vi</a>
+                                                    <form action="https://1368iii.com/admin/promotion/47" method="POST">
+                                                        <input type="hidden" name="_token"
+                                                            value="bZaLqCQlVReQKz3ogxzYGR316RSRvPrm8Ld7MQ4R"> <input
+                                                            name="_method" type="hidden" value="DELETE">
+                                                        <button type="submit" class="btn btn-danger">Xóa</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
 

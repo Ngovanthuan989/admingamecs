@@ -27,10 +27,7 @@
                                 <label for="subtitle">Nội dung Mobile</label><br>
                                 <textarea style="background-color: #2A3038;color: #fff;width:100%" name="content_mobile" rows="10" id="my-editor"></textarea>
                             </div>
-                            <input type="hidden" name="content" value="Trống" />
-                            <input type="hidden" name="content_mobile" value="Trống" />
-                            <input type="hidden" name="title" value="Trống" />
-                            <input type="hidden" name="subtitle" value="Trống" />
+
                             <input type="hidden" name="locale" value="vi" />
                             <div class="form-group">
                                 <label for="max_number">Số lần nhận tối đa</label>

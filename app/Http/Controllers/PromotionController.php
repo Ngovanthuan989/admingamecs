@@ -13,7 +13,10 @@ class PromotionController extends Controller
     //
     public function index()
     {
-        return view('dashboard.promotion.show');
+        $get_promotion=DB::table('promotion')->get();
+        return view('dashboard.promotion.show',[
+            'get_promotion' => $get_promotion
+        ]);
     }
     public function create()
     {
@@ -21,6 +24,7 @@ class PromotionController extends Controller
     }
     public function addPost(Request $request)
     {
+        // dd($request->all());
         if($request->file('image') != ''){
             $path = public_path().'/uploads/images/';
 
